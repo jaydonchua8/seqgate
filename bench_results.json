@@ -1,0 +1,105 @@
+{
+ "trials": 20000,
+ "alpha": 0.05,
+ "max_n": 40,
+ "by_effect": {
+  "0.0": {
+   "best of 3 seeds": [
+    0.5007,
+    3.0
+   ],
+   "sign test, peek every seed": [
+    0.14105,
+    36.66
+   ],
+   "sign test, fixed 40 seeds": [
+    0.0387,
+    40.0
+   ],
+   "seqgate": [
+    0.012,
+    22.86
+   ]
+  },
+  "0.5": {
+   "best of 3 seeds": [
+    0.73315,
+    3.0
+   ],
+   "sign test, peek every seed": [
+    0.66455,
+    25.21
+   ],
+   "sign test, fixed 40 seeds": [
+    0.5069,
+    40.0
+   ],
+   "seqgate": [
+    0.2031,
+    27.6
+   ]
+  },
+  "1.0": {
+   "best of 3 seeds": [
+    0.8906,
+    3.0
+   ],
+   "sign test, peek every seed": [
+    0.98065,
+    13.33
+   ],
+   "sign test, fixed 40 seeds": [
+    0.964,
+    40.0
+   ],
+   "seqgate": [
+    0.7664,
+    24.04
+   ]
+  },
+  "1.5": {
+   "best of 3 seeds": [
+    0.9659,
+    3.0
+   ],
+   "sign test, peek every seed": [
+    0.99985,
+    8.41
+   ],
+   "sign test, fixed 40 seeds": [
+    0.99975,
+    40.0
+   ],
+   "seqgate": [
+    0.98705,
+    15.79
+   ]
+  }
+ },
+ "search": {
+  "best of 3 seeds": {
+   "accepted_per_search": 523.3,
+   "pct_accepted_not_real": 91.65,
+   "pct_real_found": 88.91,
+   "seeds_per_candidate": 3.0
+  },
+  "sign test, peek every seed": {
+   "accepted_per_search": 185.85,
+   "pct_accepted_not_real": 74.09,
+   "pct_real_found": 97.97,
+   "seeds_per_candidate": 35.41
+  },
+  "sign test, fixed 40 seeds": {
+   "accepted_per_search": 84.15,
+   "pct_accepted_not_real": 43.79,
+   "pct_real_found": 96.24,
+   "seeds_per_candidate": 40.0
+  },
+  "seqgate": {
+   "accepted_per_search": 49.05,
+   "pct_accepted_not_real": 25.18,
+   "pct_real_found": 74.67,
+   "seeds_per_candidate": 23.05
+  }
+ }
+}
