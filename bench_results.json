@@ -1,105 +1,249 @@
 {
- "trials": 20000,
  "alpha": 0.05,
- "max_n": 40,
- "by_effect": {
-  "0.0": {
-   "best of 3 seeds": [
-    0.5007,
-    3.0
+ "chosen": {
+  "lam_max": 0.9,
+  "prior_var": 0.25
+ },
+ "gate_held_out": {
+  "seqgate Gate (sign)": {
+   "0 to 0.01": [
+    0.109,
+    927.72
    ],
-   "sign test, peek every seed": [
-    0.14105,
-    36.66
+   "0.01 to 0.03": [
+    0.889,
+    374.152
    ],
-   "sign test, fixed 40 seeds": [
-    0.0387,
-    40.0
+   "above 0.03": [
+    1.0,
+    128.891
    ],
-   "seqgate": [
-    0.012,
-    22.86
+   "null (sign-flipped)": [
+    0.02225,
+    924.15775
    ]
   },
-  "0.5": {
-   "best of 3 seeds": [
-    0.73315,
-    3.0
+  "seqgate MeanGate": {
+   "0 to 0.01": [
+    0.061,
+    973.868
    ],
-   "sign test, peek every seed": [
-    0.66455,
-    25.21
+   "0.01 to 0.03": [
+    0.919,
+    412.966
    ],
-   "sign test, fixed 40 seeds": [
-    0.5069,
-    40.0
+   "above 0.03": [
+    1.0,
+    158.292
    ],
-   "seqgate": [
-    0.2031,
-    27.6
+   "null (sign-flipped)": [
+    0.0165,
+    977.381
    ]
   },
-  "1.0": {
-   "best of 3 seeds": [
-    0.8906,
-    3.0
+  "z-test, fixed budget": {
+   "0 to 0.01": [
+    0.268,
+    1000.0
    ],
-   "sign test, peek every seed": [
-    0.98065,
-    13.33
+   "0.01 to 0.03": [
+    0.976,
+    1000.0
    ],
-   "sign test, fixed 40 seeds": [
-    0.964,
-    40.0
+   "above 0.03": [
+    1.0,
+    1000.0
    ],
-   "seqgate": [
-    0.7664,
-    24.04
+   "null (sign-flipped)": [
+    0.05225,
+    1000.0
    ]
   },
-  "1.5": {
-   "best of 3 seeds": [
-    0.9659,
-    3.0
+  "z-test, peek every query": {
+   "0 to 0.01": [
+    0.548,
+    601.799
    ],
-   "sign test, peek every seed": [
-    0.99985,
-    8.41
+   "0.01 to 0.03": [
+    0.989,
+    120.816
    ],
-   "sign test, fixed 40 seeds": [
-    0.99975,
-    40.0
+   "above 0.03": [
+    1.0,
+    47.064
    ],
-   "seqgate": [
-    0.98705,
-    15.79
+   "null (sign-flipped)": [
+    0.34,
+    722.5625
    ]
   }
  },
+ "gate_held_out_configs": {
+  "0 to 0.01": 7,
+  "0.01 to 0.03": 48,
+  "above 0.03": 84,
+  "null (sign-flipped)": 139,
+  "worse than -0.01": 0
+ },
+ "max_n": 1000,
+ "scale": 1.0,
  "search": {
-  "best of 3 seeds": {
-   "accepted_per_search": 523.3,
-   "pct_accepted_not_real": 91.65,
-   "pct_real_found": 88.91,
-   "seeds_per_candidate": 3.0
+  "dev corpus": {
+   "MeanGate + e-LOND ledger": {
+    "accepts": 1.78,
+    "any_false": 0.0,
+    "fdr": 0.0,
+    "final_recall": 0.6681497142857141,
+    "units_per_candidate": 806.6134999999999
+   },
+   "MeanGate + spend (union bound)": {
+    "accepts": 1.69,
+    "any_false": 0.0,
+    "fdr": 0.0,
+    "final_recall": 0.6675593154761903,
+    "units_per_candidate": 810.9731666666667
+   },
+   "MeanGate, 5% per candidate": {
+    "accepts": 2.38,
+    "any_false": 0.0,
+    "fdr": 0.0,
+    "final_recall": 0.6701876904761904,
+    "units_per_candidate": 833.8401666666667
+   },
+   "_best_recall": 0.6733214285714285,
+   "_start_recall": 0.6217261904761905,
+   "z-test, peek every query": {
+    "accepts": 14.8,
+    "any_false": 1.0,
+    "fdr": 0.3449498694385285,
+    "final_recall": 0.6719547738095238,
+    "units_per_candidate": 808.7284999999999
+   }
   },
-  "sign test, peek every seed": {
-   "accepted_per_search": 185.85,
-   "pct_accepted_not_real": 74.09,
-   "pct_real_found": 97.97,
-   "seeds_per_candidate": 35.41
-  },
-  "sign test, fixed 40 seeds": {
-   "accepted_per_search": 84.15,
-   "pct_accepted_not_real": 43.79,
-   "pct_real_found": 96.24,
-   "seeds_per_candidate": 40.0
-  },
-  "seqgate": {
-   "accepted_per_search": 49.05,
-   "pct_accepted_not_real": 25.18,
-   "pct_real_found": 74.67,
-   "seeds_per_candidate": 23.05
+  "held-out corpus": {
+   "MeanGate + e-LOND ledger": {
+    "accepts": 1.92,
+    "any_false": 0.0,
+    "fdr": 0.0,
+    "final_recall": 0.5958802440476195,
+    "units_per_candidate": 781.6348333333333
+   },
+   "MeanGate + spend (union bound)": {
+    "accepts": 1.86,
+    "any_false": 0.0,
+    "fdr": 0.0,
+    "final_recall": 0.5956660238095244,
+    "units_per_candidate": 784.9148333333334
+   },
+   "MeanGate, 5% per candidate": {
+    "accepts": 2.85,
+    "any_false": 0.01,
+    "fdr": 0.002,
+    "final_recall": 0.600803970238096,
+    "units_per_candidate": 818.357
+   },
+   "_best_recall": 0.6048738095238095,
+   "_start_recall": 0.5558053571428572,
+   "z-test, peek every query": {
+    "accepts": 15.69,
+    "any_false": 1.0,
+    "fdr": 0.33110594241014213,
+    "final_recall": 0.601697357142857,
+    "units_per_candidate": 789.9806666666666
+   }
   }
- }
+ },
+ "synthetic": true,
+ "tuning": [
+  {
+   "accept_by_effect": {
+    "0.0": 0.0,
+    "0.01": 0.1525,
+    "0.02": 0.985,
+    "0.04": 1.0
+   },
+   "cfg": {
+    "lam_max": 0.25,
+    "prior_var": 0.02
+   },
+   "false_accept": 0.0,
+   "power": 0.7125,
+   "units_null": 986.58
+  },
+  {
+   "accept_by_effect": {
+    "0.0": 0.0,
+    "0.01": 0.1025,
+    "0.02": 0.97,
+    "0.04": 1.0
+   },
+   "cfg": {
+    "lam_max": 0.25,
+    "prior_var": 0.25
+   },
+   "false_accept": 0.0,
+   "power": 0.6908333333333333,
+   "units_null": 986.6725
+  },
+  {
+   "accept_by_effect": {
+    "0.0": 0.0,
+    "0.01": 0.645,
+    "0.02": 1.0,
+    "0.04": 1.0
+   },
+   "cfg": {
+    "lam_max": 0.5,
+    "prior_var": 0.02
+   },
+   "false_accept": 0.0,
+   "power": 0.8816666666666667,
+   "units_null": 991.535
+  },
+  {
+   "accept_by_effect": {
+    "0.0": 0.005,
+    "0.01": 0.6125,
+    "0.02": 1.0,
+    "0.04": 1.0
+   },
+   "cfg": {
+    "lam_max": 0.5,
+    "prior_var": 0.25
+   },
+   "false_accept": 0.005,
+   "power": 0.8708333333333332,
+   "units_null": 989.2475
+  },
+  {
+   "accept_by_effect": {
+    "0.0": 0.015,
+    "0.01": 0.705,
+    "0.02": 1.0,
+    "0.04": 1.0
+   },
+   "cfg": {
+    "lam_max": 0.9,
+    "prior_var": 0.02
+   },
+   "false_accept": 0.015,
+   "power": 0.9016666666666667,
+   "units_null": 979.225
+  },
+  {
+   "accept_by_effect": {
+    "0.0": 0.005,
+    "0.01": 0.7375,
+    "0.02": 1.0,
+    "0.04": 1.0
+   },
+   "cfg": {
+    "lam_max": 0.9,
+    "prior_var": 0.25
+   },
+   "false_accept": 0.005,
+   "power": 0.9125,
+   "units_null": 991.3625
+  }
+ ]
 }
